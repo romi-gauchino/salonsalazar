@@ -1,0 +1,185 @@
+/* Basic Reset and Setup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: #000000; /* Deep Black */
+    --color-secondary: #FFFFFF; /* White for text */
+    --color-accent: #B8860B; /* Dark Gold/Bronze for accent */
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Roboto', sans-serif;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-secondary);
+    background-color: var(--color-primary);
+    line-height: 1.6;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    padding: 40px 0;
+    border-bottom: 2px solid var(--color-accent);
+}
+
+header h1 {
+    font-family: var(--font-heading);
+    font-size: 3.5em;
+    color: var(--color-secondary);
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-style: italic;
+    font-size: 1.2em;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Main Content Styling */
+main {
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+/* Section Styling */
+section {
+    padding: 40px 20px;
+    margin-bottom: 40px;
+    background-color: rgba(10, 10, 10, 0.8); /* Slightly off-black background */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+section h2 {
+    font-family: var(--font-heading);
+    font-size: 2.5em;
+    color: var(--color-accent);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Hairstyle Feature Section */
+.hairstyle-feature p {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
+
+.image-placeholder {
+    width: 80%;
+    max-width: 500px;
+    margin: 0 auto;
+    border: 3px solid var(--color-accent);
+    box-shadow: 0 0 10px var(--color-accent);
+    padding: 5px;
+}
+
+.image-placeholder img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.image-caption {
+    font-style: italic;
+    text-align: center;
+    margin-top: 10px;
+    color: var(--color-accent);
+}
+
+/* Resources Section (Links and Video) */
+.links-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.resource-block {
+    flex: 1;
+    min-width: 300px;
+    background-color: rgba(30, 30, 30, 0.9);
+    padding: 25px;
+    border-radius: 6px;
+}
+
+.resource-block h3 {
+    font-family: var(--font-heading);
+    color: var(--color-accent);
+    margin-bottom: 15px;
+    font-size: 1.8em;
+}
+
+.resource-block ul {
+    list-style: none;
+    margin-left: 0;
+}
+
+.resource-block li {
+    margin-bottom: 10px;
+}
+
+.resource-block a {
+    color: var(--color-secondary); /* White link color */
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: 700;
+}
+
+.resource-block a:hover {
+    color: var(--color-accent); /* Dark Gold on hover */
+    text-decoration: underline;
+}
+
+/* Video Styling */
+iframe {
+    display: block;
+    margin: 0 auto;
+    border-radius: 4px;
+    /* This makes the iframe responsive */
+    aspect-ratio: 16 / 9;
+    max-width: 100%;
+}
+
+.note {
+    font-size: 0.9em;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 15px;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9em;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    section h2 {
+        font-size: 2em;
+    }
+
+    .links-container {
+        flex-direction: column;
+    }
+
+    .resource-block {
+        min-width: 100%;
+    }
+}
